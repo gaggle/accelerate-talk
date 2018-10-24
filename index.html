@@ -22,25 +22,6 @@
     </script>
 
     <style>
-        .removed-item {
-            animation: removed-item-animation 0.9s cubic-bezier(0.6, -0.35, 0.9, 0.9) forwards;
-            transform-origin: 0% 100%;
-        }
-
-        @keyframes removed-item-animation {
-            0% {
-                opacity: 1;
-                transform: rotateZ(0);
-            }
-
-            100% {
-                opacity: 0;
-                transform: translateY(900px);
-                line-height: 0px;
-                display: none;
-            }
-        }
-
         .big-table thead {
             background-color: lightgray;
         }
@@ -53,14 +34,34 @@
             font-size: 50% !important;
         }
 
-        .reveal.reveal img
-        {
-            border: none;
-            box-shadow: none;
-            max-height: calc(75vh);
-            max-width: calc(75vw);
+        .reveal .slides {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            margin-top: 0;
         }
 
+        .reveal .slides section,
+        .reveal .slides section > section {
+            padding: 0;
+        }
+
+        .reveal section img {
+            border: none;
+            box-shadow: none;
+            margin: 0;
+        }
+
+        .reveal img, .reveal video, .reveal iframe {
+            max-height: 100%;
+            height: 100%;
+        }
+
+        .reveal figure img {
+            box-shadow: none;
+            max-width: 100%;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -81,7 +82,8 @@ Okay?">
             <img data-src="static/accelerate-cover.png" alt="Cover of Accelerate book"/>
         </section>
 
-        <section data-notes="So, the research is very robust, it's based on surveys sent to a large number of people, around 20 to 30 *thousand* respondents, every year for 4 years, from all around the">
+        <section
+                data-notes="So, the research is very robust, it's based on surveys sent to a large number of people, around 20 to 30 *thousand* respondents, every year for 4 years, from all around the">
             <img class="fragment" data-src="static/demographics-survey-map-2018.png"
                  alt="Geographical map showing the entire world was surveyed"
                  data-notes="world. And those participants are from all kinds of industries, in tiny to huge companies, with all kinds of different ways of making software.
@@ -103,7 +105,8 @@ For measuring team performance, the research identifies four specific metrics th
 
 So, to measure team performance, we first have">
                 <h2 class="fragment" data-notes="delivery lead time, that's how long it takes for code to get to production. Shorter is better, because, this is how fast we deliver value to our customers.
-Concretely the survey asked how long it takes from code committed, to code successfully running in production, and participants had to choose one of these options:">Delivery lead time</h2>
+Concretely the survey asked how long it takes from code committed, to code successfully running in production, and participants had to choose one of these options:">
+                    Delivery lead time</h2>
                 <ul class="fragment" data-notes="Alright? That's all there is to delivery lead time.
 
 The second performance metric, that is linked to company performance, is">
@@ -119,9 +122,9 @@ The second performance metric, that is linked to company performance, is">
             <section data-notes="deployment frequency. More frequent deploys reduces risk because each deploy has less features batched into them, and that removes those huge dumps of features that all have to go live at once.
 
 Deployment here means deployment to production. Participants were asked how often they deploy code to their primary service, and had to chose one of these answers:">
-                <p style="color:lightgray;">Delivery lead time</p>
                 <h2>Deployment frequency</h2>
-                <ul class="fragment" data-notes="Okay, so far so good, lead time and deployment frequency captures performance tempo. But what if going fast comes at the expense of stability? We also need to measure">
+                <ul class="fragment"
+                    data-notes="Okay, so far so good, lead time and deployment frequency captures performance tempo. But what if going fast comes at the expense of stability? We also need to measure">
                     <li>On demand (multiple deploys per day)</li>
                     <li>Between once per hour and once per day</li>
                     <li>Between once per day and onc per week</li>
@@ -131,13 +134,15 @@ Deployment here means deployment to production. Participants were asked how ofte
                 </ul>
             </section>
 
-            <section data-notes="quality. But.., what's quality? A classic reliability metric is to measure &#34;how much time between failures&#34;, but the thing with software is that it's so complex and always changing that failure is really inevitable.
+            <section
+                    data-notes="quality. But.., what's quality? A classic reliability metric is to measure &#34;how much time between failures&#34;, but the thing with software is that it's so complex and always changing that failure is really inevitable.
 
 So the more relevant question becomes &#34;How quickly is service restored?&#34;. And <b>that</b> is a widely used metric known as">
-                <p style="color:lightgray;">Delivery lead time</p>
-                <p style="color:lightgray;">Deployment frequency</p>
-                <h2 id="quality">Quality</h2>
-                <h2 class="fragment remove-item" data-remove="quality" data-notes="mean time to restore.
+                <h2>Quality</h2>
+            </section>
+
+            <section>
+                <h2 data-notes="mean time to restore.
 So, participants were asked how long it generally takes to restore service when an incident occurs, like an unplanned outage or service impairment. And they had to pick one of these options">
                     Mean Time To Restore (MTTR)
                 </h2>
@@ -154,9 +159,6 @@ So, participants were asked how long it generally takes to restore service when 
             <section data-notes="change fail percentage. This is tracking how many deploy or configuration changes causes a failure. The question asked was what percentage of all changes to a system result in degraded service?
 
 So, y'know, any time we have to patch, or roll forward, or apply a hot fix, or redo work, that all counts towards this percentage.">
-                <p style="color:lightgray;">Delivery lead time</p>
-                <p style="color:lightgray;">Deployment frequency</p>
-                <p style="color:lightgray;">Mean Time To Restore</p>
                 <h2>Change fail percentage</h2>
             </section>
 
@@ -174,7 +176,8 @@ Then the researchers identified three distinct groups of responses, and I want t
 Perhaps surprisingly this shows that high performers do not trade off stability and quality. High performers do better in all measurements.
 
 And yet, how often do we hear or say that we can move fast by trading off quality? The data shows that's just not the case. Next time any one of us hears the argument to cut a corner to go fast, think about this finding, remember that ">
-                <img data-src="static/software-delivery-performance-for-2017.png" alt="Table showing performance metrics for 2017"/>
+                <img data-src="static/software-delivery-performance-for-2017.png"
+                     alt="Table showing performance metrics for 2017"/>
             </section>
 
             <section data-notes="moving fast means high stability and quality.
@@ -194,23 +197,31 @@ And I think we can speak about MTTR, at least some of our recent incidents laste
 But lead time? And Change failure rate? I don't know them, but, if we don't have the numbers I'd like to discuss how we could fill in the blanks here.
 
 Because, what <b>if</b> we all agreed that we actually do want to track our performance like this? What if we made it so each team would answer these separately from each other? I think that would provide a lot of insights, by quantifying the successes of certain ways each team works. One team might improve deployment frequency above the others, and we could all learn from that. We'd inspire, and be inspired by, each other. I think we could really help each other to become more high performing, using the shared language of this performance model.">
-                <img data-src="static/software-delivery-performance-for-2017.png" alt="Table showing performance metrics for 2017"/>
+                <img data-src="static/software-delivery-performance-for-2017.png"
+                     alt="Table showing performance metrics for 2017"/>
             </section>
 
         </section>
 
         <section>
 
-            <section data-notes="Okay, so, I think that was already interesting. But I want to go deeper, because there are even more interesting and actionable findings to talk about.
+            <section data-notes="Okay, so, I think that was already pretty interesting. But I want to go deeper, because there are even more interesting and actionable findings to talk about.
 
 I want to tell you about two things we can do, things we could start on today, but.. to get there we have to understand one more statistical construct. We've gone over how to measure performance, but to dig deeper we have to tackle the topic of">
-                <h2 class="fragment" id="culture" data-notes="culture, But.. what's culture?, that's a word with many meanings.. What we need is more specifically known as">Culture</h2>
-                <h2 class="fragment remove-item" data-remove="culture" data-notes="organizational culture. Because agile and DevOps are as much about cultural changes as they are about technical changes.
-
-There is a lot of detail to this topic, but I want to skip right to the end, where, after a lot of analysis, a model was chosen called the">Organizational Culture</h2>
+                <h2 class="fragment"
+                    data-notes="culture, But.. what's culture?, that's a word with many meanings.. What we need is more specifically known as">
+                    Culture</h2>
             </section>
 
-            <section data-notes="Westrum Culture model. That's an established and well-known model in the social sciences, it's been around for like 15 years, and had its origins in some pretty serious industries like health-care and aviation. It's a model that captures the impact culture has on organizational performance, and just like the software delivery model, it's actually very easy to gather the metrics. I won't go into all the details but it boils down to half a dozen questions that participants rate their agreement to, such as, &#34;On my team, responsibilities are shared&#34;.
+            <section>
+                <h2 data-notes="organizational culture. Because agile and DevOps are as much about cultural changes as they are about technical changes.
+
+There is a lot of detail to this topic, but I want to skip right to the end, where, after a lot of analysis, a model was chosen called the">
+                    Organizational Culture</h2>
+            </section>
+
+            <section
+                    data-notes="Westrum Culture model. That's an established and well-known model in the social sciences, it's been around for like 15 years, and had its origins in some pretty serious industries like health-care and aviation. It's a model that captures the impact culture has on organizational performance, and just like the software delivery model, it's actually very easy to gather the metrics. I won't go into all the details but it boils down to half a dozen questions that participants rate their agreement to, such as, &#34;On my team, responsibilities are shared&#34;.
 
 The research by Westrum identified three types of organizational cultures,">
                 <h2>Westrum Culture model</h2>
@@ -225,7 +236,8 @@ The book's research took all this, and combined it with their own data, and they
                      alt="Graph showing details of each type of culture"/>
             </section>
 
-            <section data-notes="This graph comes from all that analysis, and it shows this predictive relationship. The &#34;software delivery performance&#34; box up on the right, is the one we went through before, and here we see that if culture is improved then the delivery performance and organizational performance is also improved.
+            <section
+                    data-notes="This graph comes from all that analysis, and it shows this predictive relationship. The &#34;software delivery performance&#34; box up on the right, is the one we went through before, and here we see that if culture is improved then the delivery performance and organizational performance is also improved.
 Are these bold statements to anyone?
 I don't know about you, but I didn't know about this kind of research. Of course there are no guarantees in statistics, but these kind of predictive relationships are about as powerful as it gets in social science. It is with these tools we can work towards likely success.
 
@@ -263,7 +275,8 @@ And now we've reached the level where things get real. Because in that Continuou
 
         <section>
 
-            <section data-notes="But.. That was a lot. That was a lot to take in. We're ready to dive into the specific things we can do to work smarter, but, all that context was important, because now we see how these findings aren't just trivial. When we say &#34;going fast means high stability and quality&#34;, that's really a statement built on data and validated models. It's a scientific statement.
+            <section
+                    data-notes="But.. That was a lot. That was a lot to take in. We're ready to dive into the specific things we can do to work smarter, but, all that context was important, because now we see how these findings aren't just trivial. When we say &#34;going fast means high stability and quality&#34;, that's really a statement built on data and validated models. It's a scientific statement.
 
 Of course, it's, not like every word of this is, some holy truth.. At the end of the day this is social science and statistics so, there is a limit to the precision. And the models and the data can and should be criticised. But when we do, we must take into account the thousands of data-points that underpin these findings; the careful use of science to ensure that these conclusions really do point us towards the likelihood of success.
 
@@ -327,7 +340,8 @@ Thank you :), now, I'd love to hear which questions you have for me.">
                     <li>Trunk based development</li>
                     <li>Version control <strong>everything!</strong></li>
                 </ul>
-                <img data-src="static/all-relationships-highlight.png" alt="Graph showing full relationship of technical capabilities impacting software delivery and organizational performance"/>
+                <img data-src="static/all-relationships-highlight.png"
+                     alt="Graph showing full relationship of technical capabilities impacting software delivery and organizational performance"/>
             </section>
 
         </section>
