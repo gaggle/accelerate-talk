@@ -62,13 +62,18 @@ So, the data is relevant to us, and it's a big sample, but what did they find?"/
 
             <section data-notes="First let's decode what's meant with &#34;high performing&#34;. Why should we believe that their idea of good is worth pursuing?
 
-So, measuring performance of software teams has seen some poor attempts in the past.
-For example some have tried measuring lines of code, or tracking how busy people are, but those don't work because the companies that tracked these did no better compared to others. Another attempt was using team velocity as a proxy for performance, but that doesn't work, in part because the teams end up pitted against each other, because helping another team would hurt your own velocity.
+So, measuring performance of software teams has a troubled past.
+For example early attempts tried measuring lines of code, or tracking how busy the people are, but that was too naive. Lines of code and busyness do not tell you how well the team delivers value.
+Or there was using team velocity, so the more story-points burnt the better, but that doesn't work, in part because the teams end up pitted against each other, because helping another team can hurt your own velocity.
 So, informed by past attempts, this research is careful to focus on measuring globally positive outcomes. That is, outcomes have to be good for the entire organisation.
 The entire book really is about scientifically identifying which things we, in software teams, do, that leads to good performance for the company. By measuring how teams work, and how their companies perform, they can build statistical models of which variables control what outcomes.
-For measuring team performance, the research identifies four specific metrics that it shows really are linked to increased organizational performance. And they're actually surprisingly easy to go through.
 
-So, to measure team performance, we first have">
+And the data is quite remarkable: It identifies that the best teams are <b>twice<b> as likely to exceed company goals for, profitability, productivity, and customer satisfaction. Twice as likely.
+So, we should want to know about this performance stuff, right? So, how do we actually measure team performance then?
+
+Well, it all comes down to just four metrics. Again these are shown in the statistics to be linked to company performance. And they're actually surprisingly easy to go through.
+
+So, first there's">
                 <h2 class="fragment" data-notes="delivery lead time, that's how long it takes for code to get to production. Shorter is better, because, this is how fast we deliver value to our customers.
 Concretely the survey asked how long it takes from code committed, to code successfully running in production, and participants had to choose one of these options:">
                     Delivery lead time</h2>
@@ -153,15 +158,13 @@ At this point I wondered, how do we rate?">
                 <h2>Moving fast means high stability and quality</h2>
             </section>
 
-            <section data-notes="And, well, we don't necessarily have the numbers to tell. Or at least I don't know them all.
+            <section data-notes="And, well, I don't have all the numbers.
 
-We can answer Deployment frequency, for PFG we're almost at weekly releases now, through great work from Core and QEs and everyone who's worked on that.
+I think we can answer Deployment frequency, for PFG at least we're almost realy to go to weekly releases now, through great work from Core and QEs and everyone who's worked on that.
+And I think we can speak about MTTR, we had some recent incidents that lasted several days, right? Our current drive is to focus on stability, so I'm really looking forward to seeing how much we move the needle on this metric in the next months.
+But lead time? And Change failure rate? I don't know them, but, I'd like to discuss us capturing them.
 
-And I think we can speak about MTTR, at least some of our recent incidents lasted several days, right? Our current drive is to focus on stability, so I'm really looking forward to seeing how much we move the needle on this metric in the next months.
-
-But lead time? And Change failure rate? I don't know them, but, if we don't have the numbers I'd like to discuss how we could fill in the blanks here.
-
-Because, what <b>if</b> we all agreed that we actually do want to track our performance like this? What if we made it so each team would answer these separately from each other? I think that would provide a lot of insights, by quantifying the successes of certain ways each team works. One team might improve deployment frequency above the others, and we could all learn from that. We'd inspire, and be inspired by, each other. I think we could really help each other to become more high performing, using the shared language of this performance model.">
+Because, what <b>if</b> we can all agree that we actually do want to track our performance like this? What if each team reported these metrics, and we discussed them together? I think that would provide a lot of insights, by quantifying the successes of certain ways each team works. One team might improve, say, deployment frequency above the others, and we could all learn from that. We'd inspire, and be inspired by, each other. I think we could really help each other to become more high performing, using the shared language of this performance model.">
                 <img data-src="static/software-delivery-performance-for-2017.png"
                      alt="Table showing performance metrics for 2017"/>
             </section>
@@ -172,7 +175,7 @@ Because, what <b>if</b> we all agreed that we actually do want to track our perf
 
             <section data-notes="Okay, so, I think that was already pretty interesting. But I want to go deeper, because there are even more interesting and actionable findings to talk about.
 
-I want to tell you about two things we can do, things we could start on today, but.. to get there we have to understand one more statistical construct. We've gone over how to measure performance, but to dig deeper we have to tackle the topic of">
+I want to tell you about two more findings, these are practical tips we could start on today, but.. to get there we have to understand one more statistical construct. We've gone over how to measure performance, but to dig deeper we have to tackle the topic of">
                 <h2 class="fragment"
                     data-notes="culture, But.. what's culture?, that's a word with many meanings.. What we need is more specifically known as">
                     Culture</h2>
@@ -186,52 +189,49 @@ There is a lot of detail to this topic, but I want to skip right to the end, whe
             </section>
 
             <section
-                    data-notes="Westrum Culture model. That's an established and well-known model in the social sciences, it's been around for like 15 years, and had its origins in some pretty serious industries like health-care and aviation. It's a model that captures the impact culture has on organizational performance, and just like the software delivery model, it's actually very easy to gather the metrics. I won't go into all the details but it boils down to half a dozen questions that participants rate their agreement to, such as, &#34;On my team, responsibilities are shared&#34;.
+                    data-notes="Westrum Culture model. That's an established and well-known model in the social sciences, it's been around for like 15 years and had its origins in some pretty serious industries like health-care and aviation.
+It's a model that captures the impact culture has on organizational performance, and just like the software delivery model, it's actually very easy to gather the metrics that go into this one. I'll keep it brief and just say it boils down to half a dozen questions that participants rate their agreement to, such as, quote, &#34;On my team, responsibilities are shared&#34;.
 
-The research by Westrum identified three types of organizational cultures,">
+But two things to know: First of all, the research by Dr. Westrum identified three types of organizational cultures,">
                 <h2>Westrum Culture model</h2>
             </section>
 
             <section data-notes="those are Pathological, Bureaucratic, and Generative cultures. Generative culture is what we aim for, that's where we work together to accomplish goals, and on doing so well.
 
-But the amazing thing with this Westrum culture model, is that Westrum showed it's not simply that culture <b>correlates</b> to organizational performance, it's actually predictive. Okay? He showed that a generative culture <b>causes</b> better organizational performance. I personally resisted that a bit when I first read it, but there are whitepapers and research to back it up. It's just hard to argue against well-established models, what I read boils down to a lot of case studies and statistics that show how changes to culture really does affect the companies, and that this model captures those changes.
+But secondly, the amazing thing with this Westrum culture model, is that Westrum showed it's not simply that culture <b>correlates</b> to organizational performance, it's actually predictive. Okay? He showed that a generative culture <b>causes</b> better organizational performance. I personally resisted that a bit when I first read it, but there are whitepapers and research to back it up. What I read boils down to a lot of case studies and statistics that show how changes to culture really does affect the companies, and that this model captures those changes.
 
-The book's research took all this, and combined it with their own data, and they also found that the Westrum culture predicts organizational performance. Okay? So it also works in software.">
+So the book's research took all this, and combined it with their own data, and they also found that the Westrum culture predicts organizational performance. Okay? So it also works in software.">
                 <img data-src="static/westrums-typology-of-organizational-culture.png"
                      alt="Graph showing details of each type of culture"/>
             </section>
 
             <section
                     data-notes="This graph comes from all that analysis, and it shows this predictive relationship. The &#34;software delivery performance&#34; box up on the right, is the one we went through before, and here we see that if culture is improved then the delivery performance and organizational performance is also improved.
-Are these bold statements to anyone?
-I don't know about you, but I didn't know about this kind of research. Of course there are no guarantees in statistics, but these kind of predictive relationships are about as powerful as it gets in social science. It is with these tools we can work towards likely success.
+Are these bold statements to anyone? I don't know about you, but I didn't know about this kind of research at all. Of course there are no guarantees in statistics, but these kinds of predictive relationships are about as powerful as it gets in social science. With this we see how we can work towards likely success.
 
-I sometimes want to ask, like, &#34;why does it work this way?&#34;, or &#34;what is the exact reason culture matters to performance?&#34;. Because the findings so far are kind of abstract, right?
-We will actually go into some concrete examples here in a second, but if you're more curious after that you can go read whitepapers and theories underpinning all this.
-But it's valuable to understand these relationships, even though they are abstract, because it focuses our discussions on how we can improve our work. Because we can measure these boxes, right? We can measure our software delivery and culture.
+I sometimes want to ask, like, &#34;why does it work this way?&#34;, or &#34;what is the exact reason culture matters to performance?&#34;. Because, at this point everything has been kind of abstract, right? Performance is nice, but, how does it relate to my daily work?
+We will actually go into some concrete examples here in a second, but it's valuable to understand these relationships I think, even though they are abstract, because it focuses our discussions in the right direction. We don't have to discuss every little detail on what directions to go in, if we can agree that these models are good enough for us.
 
-And, actually we do track culture already, our yearly survey has the kind of questions that informs the Westrum model. I think whoever does our surveys is using this science too. But a year is also a long time between samples. Some companies ask the Westrum questions quarterly, to better be able to steer their culture. Personally, I'd support that, I think it would allow us to more quickly see if our changes are having an effect on our culture.
+And, actually we do already use this kind of thinking. Our yearly survey has the kind of questions that informs the Westrum model, so I think whoever does our surveys are using this science too. Although, I think a year is a long time between surveying. Some companies ask the Westrum questions quarterly, to better steer their culture. Personally, I'd support that, I think it would allow us to more quickly see if our changes are having an effect on our culture.
 
 But of course the research didn't stop here. All that survey data shows another very interesting predictive relationship: That technical practices like Continuous Delivery">
                 <img data-src="static/westrum-organizational-cultures-outcomes.png"
                      alt="Graph showing Westrum culture impacts software delivery and organizational performance"/>
             </section>
 
-            <section data-notes="improves culture, as measured by the Westrum model. That's what we see in this example. We can improve our culture, by implementing continuous delivery. I've censored out the details unrelated to this talk, but we can look at those later if you want.
+            <section data-notes="improves culture, as measured by that Westrum model. That's what we see here. We can improve our culture, by implementing continuous delivery. Does that make sense? I know we haven't touched on that &#34;Continuous Delivery&#34; box yet, but it's another statistical construct, just like the other ones we've been through. This one is based on things like test automation and monitoring and more.
+By the way the blank box has some details unrelated to this talk, but we can look at those later if you want.
 
-But does that make sense? I know we haven't touched on that &#34;Continuous Delivery&#34; box yet, but it is another statistical construct, just like the ones we've been through. So it has specific meanings and ways to impact it.
-
-The point here is that we're coupling these constructs together to form a statistically valid argument that shows that">
+The point here is that we can couple these constructs together, to form a statistically valid argument that shows that">
                 <img data-src="static/westrum-organizational-cultures-drivers-highlight.png"
                      alt="Graph showing Continuous Delivery impacts Westrum culture"/>
             </section>
 
             <section data-notes="continuous delivery causes better software and organizational performance!
-Wow! Except.. heh, okay, we.. actually already knew that, didn't we? :) *Of course* continuous delivery improves software delivery performance.. it's what our whole industry has turned towards for years now. We should be surprised if there was no impact, if somehow things like test automation and monitoring didn't matter to delivery performance.
-
+Wow! Except.. heh, okay, we.. actually already knew that, didn't we? :) <b>Of course</b> continuous delivery improves software delivery performance.. it's what our whole industry has turned towards for a decade. We should be surprised if there was no impact, if somehow things like test automation and monitoring didn't matter to delivery performance.
 But that's often the case with science, it shows what we already know, but, by looking at it through these models, we validate our knowledge with real actual numbers, and crucially the models explain what we can do to impact them.
 
-And now we've reached the level where things get real. Because in that Continuous Delivery model, the things that impact is are very concrete, <b>they're</b> the findings I want to tell you about.">
+And now we're reaching the level where things impact our daily work. Because in that Continuous Delivery model, the things that impact it, are very concrete, <b>they're</b> the findings I want to tell you about.">
                 <img data-src="static/westrum-organizational-cultures-drivers-and-outcomes-highlight.png"
                      alt="Graph showing Continuous Delivery and Lean Management impacts performance"/>
             </section>
@@ -241,24 +241,23 @@ And now we've reached the level where things get real. Because in that Continuou
         <section>
 
             <section
-                    data-notes="But.. That was a lot. That was a lot to take in. We're ready to dive into the specific things we can do to work smarter, but, all that context was important, because now we see how these findings aren't just trivial. When we say &#34;going fast means high stability and quality&#34;, that's really a statement built on data and validated models. It's a scientific statement.
+                    data-notes="But.. That was a lot. That was a lot to take in, right? But, all that context was important, because now we see how these findings aren't bogus. When we say &#34;going fast means high stability and quality&#34;, that's really a powerful statement built on data and validated models. It's a scientific statement.
+Of course, it's, not like every word of this is, some holy truth.. At the end of the day this is social science and statistics so, there is a limit to the precision. And the models and the data can and should be criticised. But when we criticise we must take into account the thousands of data-points that underpin these findings; their careful use of science. These findings really do maximize the likelihood of success.
 
-Of course, it's, not like every word of this is, some holy truth.. At the end of the day this is social science and statistics so, there is a limit to the precision. And the models and the data can and should be criticised. But when we do, we must take into account the thousands of data-points that underpin these findings; the careful use of science to ensure that these conclusions really do point us towards the likelihood of success.
-
-Ultimately the book identifies 24 specific technical and managerial practices that impacts organizational performance. The complete set of capabilities is beyond this talk, but today I've picked two that relates directly to how we work. They're both technical capabilities because we're mostly technical people here, and I want to leave you with advice that hits close to home. But the remaining ones also focus on process, and management, and security, architecture, and more. They're all well worth looking into.
+So, ultimately the book identifies 24 specific technical and managerial practices that impacts organizational performance. The complete set of capabilities is beyond this talk, but today I've picked two that relates directly to how we work. They're both technical capabilities, because, we're mostly technical people here, and I want to leave you with advice that hits close to home. But the remaining ones also focus on process, and management, and security, architecture, and more. They're all well worth looking into.
 
 But, let's go, the first capability I want to talk about is">
                 <div class="fragment" data-notes="trunk based development. Aka master-based development. It's the way of working that is the opposite of long-lived feature branches.
 
 The data is really clear on this: High performing teams have fewer than 3 active branches at any time, their branches have very short lifespans of less than a day, and the teams never have code freeze periods. These results are completely independent of team size, org size, or industry.
 
-Trunk based development is strongly correlated with Continuous Delivery, and we know from before that that ultimately impacts team- and org-performance.
+Trunk based development is strongly correlated with Continuous Delivery, and so we know that, that means the company will do better.
 
-Is that surprising? Certainly the science was new to me. One theory for why long lived branches are bad is that they discourage small refactorings, because there are always big changes on the horizon.
+Is that surprising? Certainly the science here was new to me. One theory for why long lived branches are bad, is that they discourage small refactorings, because there are always big changes on the horizon.
 
 It is very rare that I can get behind absolute statements, but the researchers stress that they are really clear on this finding: Do not have long lived branches.
 
-Okay?
+Okay? Food for thought for some of us, I think.
 
 Let's try one more. Let's talk about">
                     <h4>Finding 1</h4>
@@ -268,19 +267,17 @@ Let's try one more. Let's talk about">
 
             <section data-notes="version control. Of all production artifacts. Version control has a very strong correlation to continuous delivery.
 
-Now, maybe saying version control sounds innocent, but recall that all of our database is really not versioned. And can you think of any servers or services that you wouldn't want to lose, because they have special changes applied directly to them, that aren't captured in code?
+Now, maybe saying version control sounds innocent, but recall that all of our database is really not versioned. And what about any servers or services that you wouldn't want to lose, because they have special changes applied directly to them, that aren't captured in code?
 
-The research identifies a whole set of things we must store in version control: All production artifacts, all application code, all application and system configurations, and all scripts for building and configuring the environment. All of those strongly correlates to continuous delivery, so this is another finding that has a great impact on team- and org-performance.
+The research identifies a whole set of things that are important to store in version control: All production artifacts, all application code, all application and system configurations, and all scripts for building and configuring the environment. All of those strongly correlates to continuous delivery, so this is another finding that has a great impact on team- and org-performance.
 
-Interestingly the data shows that it is not the application code that's most critical to version, it is actually the *configuration* code that has the most impact.
+Interestingly the data shows that it is not the application code that's most critical to version, it is actually the <b>configuration</b> code that has the most impact.
 
-Is that surprising? I was definitely surprised that application code isn't the most critical thing to version.
+Is that surprising? I was definitely surprised that application code isn't the most critical thing to version. It's configuration code for the service, and the configuration of the environment it runs it. So no manual messing-about with AWS resources, or editing JSON files or values directly on a service.
 
-Imagine we took this finding to heart, imagine our database, with all its configuration, its environment, its details, everything captured in version control. We could run that code to make us a database in a different environment, couldn't we? We could test changes in a development environment, instead of directly in production. Maybe we could even make it work locally. Having a database where I don't have to fear every change catastrophically losing production data, that would be nice, right?
+Imagine we took this finding to heart, imagine our database, with all its configuration, its environment, its details, everything captured in version control. We could run that code to make us a database in a different environment, couldn't we? We could test changes in a development environment, instead of directly in production. Having a database where I don't have to fear every change catastrophically losing production data, that would be nice, wouldn't it? And the selects system should be versioned too. No more editing a select and it goes live the second its saved.
 
-And imagine we captured the selects system in code as well. No more editing a select and it goes live the second its saved. Imagine you could check out a specific commit, deploy it to an environment, and our whole application would just be there.
-
-I think we intuitively know a lot of this already, but this research validates that this really have a huge impact on organizational performance. With this data we can argue that getting our systems into version control is not just a technical niceity, it impacts business performance. We're leaving money on the table by NOT doing this.
+I think we intuitively know a lot of this already, but this research really validates that this has a huge impact on organizational performance. With this data we can see that we must get our systems into version control, it's not just some technical niceity. The data shows we're leaving money on the table by NOT doing this, because this is one the road for becoming high performers.
 <pause>
 So">
                 <div>
@@ -289,11 +286,11 @@ So">
                 </div>
             </section>
 
-            <section data-notes="those are all we have time for today, but I think it's been a lot to take in. If you're interested to hear about the other findings, then, let's meet up. Maybe there's even enough for another talk.. just, tell me if you'd be interested in that.
+            <section data-notes="those are all we have time for today, but I think it's been a lot to take in. If you're interested to hear about the other findings, then, let's meet up. Maybe there's even enough for another talk.. just, tell me, if you would be interested in that.
 
-I think it's worth saying again that these findings are from just four years of research, so, of course it's worth discussing how each model and finding fits into our context. But a lot of this is also relatively simple to try, they're practical things we can do and then see how they work for us. I don't advocate that we must blindly adopt whatever it says in the book, but.. I do think we should adopt this scientific mindset.
+I think it's worth saying again that these findings are only from four years of research, so, of course it's worth discussing how each model and finding fits into our context. But a lot of this is also relatively simple to try, they're practical things we can do and then see how they work for us. I don't advocate that we must blindly adopt whatever it says in this book, but.. the scientific mindset <b>is</b> one I think we should pay a lot of attention to.
 
-By measuring how we work, we can introduce changes and see their impact. And if we do that, and we use it to continuously improve ourselves, to continuously tweak how we work to become ever more effective, then we will go all the way to the top.
+Because it's by measuring how we work, that we can introduce changes and see their impact. And if we do that, and we use it to continuously improve ourselves, to continuously tweak how we work to become ever more effective, then we <b>will</b> go all the way to the top.
 The capabilities identified by this research involves everyone, I know today I only talked about technical findings, but the full set involves leadership, management, sales, support, everyone. We should all involve ourselves in this.
 
 It is totally in our power to make these changes, we just have to grab the opportunity.
